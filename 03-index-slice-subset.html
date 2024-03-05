@@ -381,11 +381,11 @@ the last episode. Let’s reopen and read in the data again:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure pandas is loaded</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the survey CSV</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Make sure pandas is loaded</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Read in the survey CSV</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span></code></pre>
 </div>
 </section><section id="indexing-and-slicing-in-python"><h2 class="section-heading">Indexing and Slicing in Python<a class="anchor" aria-label="anchor" href="#indexing-and-slicing-in-python"></a>
 </h2>
@@ -402,20 +402,20 @@ name. There are two ways to do this:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TIP: use the .head() method we saw earlier to make output shorter</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: select a 'subset' of the data using the column name</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'species_id'</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: use the column name as an 'attribute'; gives the same output</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>surveys_df.species_id</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># TIP: use the .head() method we saw earlier to make output shorter</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co"># Method 1: select a 'subset' of the data using the column name</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>surveys_df[<span class="st">'species_id'</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co"># Method 2: use the column name as an 'attribute'; gives the same output</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>surveys_df.species_id</span></code></pre>
 </div>
 <p>We can also create a new object that contains only the data within
 the <code>species_id</code> column as follows:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates an object, surveys_species, that only contains the `species_id` column</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>surveys_species <span class="op">=</span> surveys_df[<span class="st">'species_id'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Creates an object, surveys_species, that only contains the `species_id` column</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>surveys_species <span class="op">=</span> surveys_df[<span class="st">'species_id'</span>]</span></code></pre>
 </div>
 <p>We can pass a list of column names too, as an index to select columns
 in that order. This is useful when we need to reorganize our data.</p>
@@ -424,26 +424,25 @@ DataFrame, an exception (error) will be raised.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the species and plot columns from the DataFrame</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>surveys_df[[<span class="st">'species_id'</span>, <span class="st">'plot_id'</span>]]</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># What happens when you flip the order?</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>surveys_df[[<span class="st">'plot_id'</span>, <span class="st">'species_id'</span>]]</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># What happens if you ask for a column that doesn't exist?</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'speciess'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Select the species and plot columns from the DataFrame</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>surveys_df[[<span class="st">'species_id'</span>, <span class="st">'plot_id'</span>]]</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co"># What happens when you flip the order?</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>surveys_df[[<span class="st">'plot_id'</span>, <span class="st">'species_id'</span>]]</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># What happens if you ask for a column that doesn't exist?</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>surveys_df[<span class="st">'speciess'</span>]</span></code></pre>
 </div>
 <p>Python tells us what type of error it is in the traceback, at the
 bottom it says <code>KeyError: 'speciess'</code> which means that
 <code>speciess</code> is not a valid column name (nor a valid key in the
 related Python data type dictionary).</p>
-<div id="reminder" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="reminder" class="callout-inner">
-<h3 class="callout-title">Reminder<a class="anchor" aria-label="anchor" href="#reminder"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="reminder">Reminder<a class="anchor" aria-label="anchor" href="#reminder"></a></h3>
 <div class="callout-content">
 <p>The Python language and its modules (such as Pandas) define reserved
 words that should not be used as identifiers when assigning objects and
@@ -463,13 +462,12 @@ convert a tuple to a list using <code>list(sometuple)</code>.</p>
 </div>
 </section><section id="extracting-range-based-subsets-slicing"><h2 class="section-heading">Extracting Range based Subsets: Slicing<a class="anchor" aria-label="anchor" href="#extracting-range-based-subsets-slicing"></a>
 </h2>
-<hr class="half-width"><div id="reminder-1" class="callout callout">
+<hr class="half-width"><div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="reminder-1" class="callout-inner">
-<h3 class="callout-title">Reminder<a class="anchor" aria-label="anchor" href="#reminder-1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="reminder-1">Reminder<a class="anchor" aria-label="anchor" href="#reminder-1"></a></h3>
 <div class="callout-content">
 <p>Python uses 0-based indexing.</p>
 </div>
@@ -482,8 +480,8 @@ that index elements within objects starting at 1.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list of numbers:</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Create a list of numbers:</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span></code></pre>
 </div>
 <p><img src="fig/slicing-indexing.png" alt="indexing diagram" class="figure"><img src="fig/slicing-slicing.png" alt="slicing diagram" class="figure"></p>
 <div id="challenge---extracting-data" class="callout discussion">
@@ -498,13 +496,13 @@ that index elements within objects starting at 1.</p>
 </ol><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>a[<span class="dv">0</span>]</span></code></pre>
 </div>
 <ol start="2" style="list-style-type: decimal"><li>How about this:</li>
 </ol><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">5</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>a[<span class="dv">5</span>]</span></code></pre>
 </div>
 <ol start="3" style="list-style-type: decimal"><li><p>In the example above, calling <code>a[5]</code> returns an error.
 Why is that?</p></li>
@@ -512,7 +510,7 @@ Why is that?</p></li>
 </ol><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a[<span class="bu">len</span>(a)]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>a[<span class="bu">len</span>(a)]</span></code></pre>
 </div>
 </div>
 </div>
@@ -528,20 +526,20 @@ and 2 your code would look like this:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select rows 0, 1, 2 (row 3 is not selected)</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="dv">0</span>:<span class="dv">3</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Select rows 0, 1, 2 (row 3 is not selected)</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>surveys_df[<span class="dv">0</span>:<span class="dv">3</span>]</span></code></pre>
 </div>
 <p>The stop bound in Python is different from what you might be used to
 in languages like Matlab and R.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the first 5 rows (rows 0, 1, 2, 3, 4)</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>surveys_df[:<span class="dv">5</span>]</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select the last element in the list</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># (the slice starts at the last element, and ends at the end of the list)</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="op">-</span><span class="dv">1</span>:]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Select the first 5 rows (rows 0, 1, 2, 3, 4)</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>surveys_df[:<span class="dv">5</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># Select the last element in the list</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co"># (the slice starts at the last element, and ends at the end of the list)</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>surveys_df[<span class="op">-</span><span class="dv">1</span>:]</span></code></pre>
 </div>
 <p>We can also reassign values within subsets of our DataFrame.</p>
 <p>But before we do that, let’s look at the difference between the
@@ -553,11 +551,11 @@ Python.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the 'copy() method'</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>true_copy_surveys_df <span class="op">=</span> surveys_df.copy()</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the '=' operator</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>ref_surveys_df <span class="op">=</span> surveys_df</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Using the 'copy() method'</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>true_copy_surveys_df <span class="op">=</span> surveys_df.copy()</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co"># Using the '=' operator</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>ref_surveys_df <span class="op">=</span> surveys_df</span></code></pre>
 </div>
 <p>You might think that the code
 <code>ref_surveys_df = surveys_df</code> creates a fresh distinct copy
@@ -575,21 +573,21 @@ subset of the DataFrame that references another DataFrame object:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign the value `0` to the first three rows of data in the DataFrame</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>ref_surveys_df[<span class="dv">0</span>:<span class="dv">3</span>] <span class="op">=</span> <span class="dv">0</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># Assign the value `0` to the first three rows of data in the DataFrame</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>ref_surveys_df[<span class="dv">0</span>:<span class="dv">3</span>] <span class="op">=</span> <span class="dv">0</span></span></code></pre>
 </div>
 <p>Let’s try the following code:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ref_surveys_df was created using the '=' operator</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ref_surveys_df.head()</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># true_copy_surveys_df was created using the copy() function</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>true_copy_surveys_df.head()</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># surveys_df is the original dataframe</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>surveys_df.head()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># ref_surveys_df was created using the '=' operator</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>ref_surveys_df.head()</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co"># true_copy_surveys_df was created using the copy() function</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>true_copy_surveys_df.head()</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="co"># surveys_df is the original dataframe</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>surveys_df.head()</span></code></pre>
 </div>
 <p>What is the difference between these three dataframes?</p>
 <p>When we assigned the first 3 rows the value of <code>0</code> using
@@ -610,7 +608,7 @@ method</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>true_copy_surveys_df <span class="op">=</span> surveys_df.copy()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>true_copy_surveys_df <span class="op">=</span> surveys_df.copy()</span></code></pre>
 </div>
 </li>
 <li>
@@ -619,7 +617,7 @@ operator</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ref_surveys_df <span class="op">=</span> surveys_df</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>ref_surveys_df <span class="op">=</span> surveys_df</span></code></pre>
 </div>
 </li>
 </ul><p>Okay, that’s enough of that. Let’s create a brand new clean dataframe
@@ -627,7 +625,7 @@ from the original data CSV file.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"data/surveys.csv"</span>)</span></code></pre>
 </div>
 </section><section id="slicing-subsets-of-rows-and-columns-in-python"><h2 class="section-heading">Slicing Subsets of Rows and Columns in Python<a class="anchor" aria-label="anchor" href="#slicing-subsets-of-rows-and-columns-in-python"></a>
 </h2>
@@ -646,8 +644,8 @@ select month, day and year (columns 2, 3 and 4 if we start counting at
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># iloc[row slicing, column slicing]</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>surveys_df.iloc[<span class="dv">0</span>:<span class="dv">3</span>, <span class="dv">1</span>:<span class="dv">4</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># iloc[row slicing, column slicing]</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>surveys_df.iloc[<span class="dv">0</span>:<span class="dv">3</span>, <span class="dv">1</span>:<span class="dv">4</span>]</span></code></pre>
 </div>
 <p>which gives the <strong>output</strong></p>
 <div class="codewrapper">
@@ -667,14 +665,14 @@ data:</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select all columns for rows of index values 0 and 10</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>surveys_df.loc[[<span class="dv">0</span>, <span class="dv">10</span>], :]</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># What does this do?</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>surveys_df.loc[<span class="dv">0</span>, [<span class="st">'species_id'</span>, <span class="st">'plot_id'</span>, <span class="st">'weight'</span>]]</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># What happens when you type the code below?</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>surveys_df.loc[[<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">35549</span>], :]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># Select all columns for rows of index values 0 and 10</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>surveys_df.loc[[<span class="dv">0</span>, <span class="dv">10</span>], :]</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a><span class="co"># What does this do?</span></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a>surveys_df.loc[<span class="dv">0</span>, [<span class="st">'species_id'</span>, <span class="st">'plot_id'</span>, <span class="st">'weight'</span>]]</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a><span class="co"># What happens when you type the code below?</span></span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a>surveys_df.loc[[<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">35549</span>], :]</span></code></pre>
 </div>
 <p><strong>NOTE</strong>: Labels must be found in the DataFrame or you
 will get a <code>KeyError</code>.</p>
@@ -690,14 +688,14 @@ location within the DataFrame and <code>iloc</code> indexing:</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Syntax for iloc indexing to finding a specific data element</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>dat.iloc[row, column]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co"># Syntax for iloc indexing to finding a specific data element</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>dat.iloc[row, column]</span></code></pre>
 </div>
 <p>In this <code>iloc</code> example,</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>surveys_df.iloc[<span class="dv">2</span>, <span class="dv">6</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>surveys_df.iloc[<span class="dv">2</span>, <span class="dv">6</span>]</span></code></pre>
 </div>
 <p>gives the <strong>output</strong></p>
 <div class="codewrapper">
@@ -752,38 +750,38 @@ we can select all rows that have a year value of 2002:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>surveys_df[surveys_df.year <span class="op">==</span> <span class="dv">2002</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>surveys_df[surveys_df.year <span class="op">==</span> <span class="dv">2002</span>]</span></code></pre>
 </div>
 <p>Which produces the following output:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="dv">33320</span>      <span class="dv">33321</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         DM    M     <span class="dv">38</span>      <span class="dv">44</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="dv">33321</span>      <span class="dv">33322</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         DO    M     <span class="dv">37</span>      <span class="dv">58</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="dv">33322</span>      <span class="dv">33323</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         PB    M     <span class="dv">28</span>      <span class="dv">45</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="dv">33323</span>      <span class="dv">33324</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         AB  NaN    NaN     NaN</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="dv">33324</span>      <span class="dv">33325</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         DO    M     <span class="dv">35</span>      <span class="dv">29</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="dv">35544</span>      <span class="dv">35545</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>       <span class="dv">15</span>         AH  NaN    NaN     NaN</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="dv">35545</span>      <span class="dv">35546</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>       <span class="dv">15</span>         AH  NaN    NaN     NaN</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="dv">35546</span>      <span class="dv">35547</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>       <span class="dv">10</span>         RM    F     <span class="dv">15</span>      <span class="dv">14</span></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="dv">35547</span>      <span class="dv">35548</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>        <span class="dv">7</span>         DO    M     <span class="dv">36</span>      <span class="dv">51</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="dv">35548</span>      <span class="dv">35549</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>        <span class="dv">5</span>        NaN  NaN    NaN     NaN</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2229</span> rows x <span class="dv">9</span> columns]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>record_id  month  day  year  plot_id species_id  sex  hindfoot_length  weight</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="dv">33320</span>      <span class="dv">33321</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         DM    M     <span class="dv">38</span>      <span class="dv">44</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="dv">33321</span>      <span class="dv">33322</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         DO    M     <span class="dv">37</span>      <span class="dv">58</span></span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="dv">33322</span>      <span class="dv">33323</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         PB    M     <span class="dv">28</span>      <span class="dv">45</span></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="dv">33323</span>      <span class="dv">33324</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         AB  NaN    NaN     NaN</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a><span class="dv">33324</span>      <span class="dv">33325</span>      <span class="dv">1</span>   <span class="dv">12</span>  <span class="dv">2002</span>        <span class="dv">1</span>         DO    M     <span class="dv">35</span>      <span class="dv">29</span></span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>...</span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a><span class="dv">35544</span>      <span class="dv">35545</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>       <span class="dv">15</span>         AH  NaN    NaN     NaN</span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="dv">35545</span>      <span class="dv">35546</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>       <span class="dv">15</span>         AH  NaN    NaN     NaN</span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="dv">35546</span>      <span class="dv">35547</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>       <span class="dv">10</span>         RM    F     <span class="dv">15</span>      <span class="dv">14</span></span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="dv">35547</span>      <span class="dv">35548</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>        <span class="dv">7</span>         DO    M     <span class="dv">36</span>      <span class="dv">51</span></span>
+<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a><span class="dv">35548</span>      <span class="dv">35549</span>     <span class="dv">12</span>   <span class="dv">31</span>  <span class="dv">2002</span>        <span class="dv">5</span>        NaN  NaN    NaN     NaN</span>
+<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a>[<span class="dv">2229</span> rows x <span class="dv">9</span> columns]</span></code></pre>
 </div>
 <p>Or we can select all rows that do not contain the year 2002:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>surveys_df[surveys_df.year <span class="op">!=</span> <span class="dv">2002</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>surveys_df[surveys_df.year <span class="op">!=</span> <span class="dv">2002</span>]</span></code></pre>
 </div>
 <p>We can define sets of criteria too:</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>surveys_df[(surveys_df.year <span class="op">&gt;=</span> <span class="dv">1980</span>) <span class="op">&amp;</span> (surveys_df.year <span class="op">&lt;=</span> <span class="dv">1985</span>)]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>surveys_df[(surveys_df.year <span class="op">&gt;=</span> <span class="dv">1980</span>) <span class="op">&amp;</span> (surveys_df.year <span class="op">&lt;=</span> <span class="dv">1985</span>)]</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="python-syntax-cheat-sheet">Python Syntax Cheat Sheet<a class="anchor" aria-label="anchor" href="#python-syntax-cheat-sheet"></a></h3>
@@ -817,7 +815,7 @@ DataFrame based upon a list of values as follows:</p></li>
 </ol><div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>surveys_df[surveys_df[<span class="st">'species_id'</span>].isin([listGoesHere])]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>surveys_df[surveys_df[<span class="st">'species_id'</span>].isin([listGoesHere])]</span></code></pre>
 </div>
 <p>Use the <code>isin</code> function to find all plots that contain
 particular species in the “surveys” DataFrame. How many records contain
@@ -843,14 +841,14 @@ example,</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x to 5</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># What does the code below return?</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">&gt;</span> <span class="dv">5</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># How about this?</span></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">==</span> <span class="dv">5</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># Set x to 5</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="co"># What does the code below return?</span></span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a>x <span class="op">&gt;</span> <span class="dv">5</span></span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a><span class="co"># How about this?</span></span>
+<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a>x <span class="op">==</span> <span class="dv">5</span></span></code></pre>
 </div>
 <p>When we ask Python whether <code>x</code> is greater than 5, it
 returns <code>False</code>. This is Python’s way to say “No”. Indeed,
@@ -872,28 +870,28 @@ object.</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>pd.isnull(surveys_df)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>pd.isnull(surveys_df)</span></code></pre>
 </div>
 <p>A snippet of the output is below:</p>
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>      record_id  month    day   year plot_id species_id    sex  hindfoot_length weight</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">35549</span> rows x <span class="dv">9</span> columns]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>      record_id  month    day   year plot_id species_id    sex  hindfoot_length weight</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="dv">0</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a><span class="dv">1</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a><span class="dv">2</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
+<span id="cb30-5"><a href="#cb30-5" tabindex="-1"></a><span class="dv">3</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
+<span id="cb30-6"><a href="#cb30-6" tabindex="-1"></a><span class="dv">4</span>         <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">False</span>  <span class="va">False</span>   <span class="va">False</span>      <span class="va">True</span></span>
+<span id="cb30-7"><a href="#cb30-7" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="#cb30-8" tabindex="-1"></a>[<span class="dv">35549</span> rows x <span class="dv">9</span> columns]</span></code></pre>
 </div>
 <p>To select the rows where there are null values, we can use the mask
 as an index to subset our data as follows:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To select just the rows with NaN values, we can use the 'any()' method</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>surveys_df[pd.isnull(surveys_df).<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="co"># To select just the rows with NaN values, we can use the 'any()' method</span></span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>surveys_df[pd.isnull(surveys_df).<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)]</span></code></pre>
 </div>
 <p>Note that the <code>weight</code> column of our DataFrame contains
 many <code>null</code> or <code>NaN</code> values. We will explore ways
@@ -903,9 +901,9 @@ the code below do?</p>
 <div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># What does this do?</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>empty_weights <span class="op">=</span> surveys_df[pd.isnull(surveys_df[<span class="st">'weight'</span>])][<span class="st">'weight'</span>]</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(empty_weights)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># What does this do?</span></span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a>empty_weights <span class="op">=</span> surveys_df[pd.isnull(surveys_df[<span class="st">'weight'</span>])][<span class="st">'weight'</span>]</span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a><span class="bu">print</span>(empty_weights)</span></code></pre>
 </div>
 <p>Let’s take a minute to look at the statement above. We are using the
 Boolean object <code>pd.isnull(surveys_df['weight'])</code> as an index
@@ -1007,7 +1005,7 @@ slicing and conditional subsetting.</li>
   "identifier": "https://preview.carpentries.org/python-ecology-lesson/03-index-slice-subset.html",
   "dateCreated": "2023-05-08",
   "dateModified": "2023-05-08",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
